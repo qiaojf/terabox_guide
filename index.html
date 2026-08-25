@@ -11,10 +11,10 @@
 .v2-rail-nav{padding:8px 0 12px;overflow:auto;scrollbar-width:none}.v2-rail-nav::-webkit-scrollbar{display:none}.nav-item{position:relative;width:100%;height:37px;padding:0 14px;display:grid;grid-template-columns:27px 1fr;gap:8px;align-items:center;background:transparent;color:#777;text-align:left;border:0;cursor:pointer;white-space:nowrap}.nav-item::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:3px;background:transparent}.nav-item b{font:600 10px "IBM Plex Mono","JetBrains Mono",Consolas,monospace;color:#999}.nav-item span{font-size:10.5px;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}.nav-item:hover{color:#222;background:#fafafa}.nav-item.is-active{color:#222;background:#f4f7ee}.nav-item.is-active::before{background:var(--brand)}.nav-item.is-active b{color:var(--brand-dark)}
 .rail-foot{border-top:1px solid var(--line);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;color:#888;font-size:9px;letter-spacing:.1em;white-space:nowrap}.app.rail-collapsed .brand-link,.app.rail-collapsed .nav-item span,.app.rail-collapsed .rail-foot{display:none}.app.rail-collapsed .v2-rail-brand{padding:14px 0 8px;justify-content:center}.app.rail-collapsed .v2-rail-toggle{margin:0}.app.rail-collapsed .nav-item{grid-template-columns:1fr;padding:0;text-align:center}
 .topbar{grid-column:2;grid-row:1;display:flex;align-items:center;gap:18px;padding:0 22px;background:var(--white);border-bottom:1px solid var(--line);z-index:50}.top-client{font-size:11px;letter-spacing:.1em;color:#333}.top-rule{height:16px;width:1px;background:#ccc}.top-section{font-size:10px;color:#777;letter-spacing:.08em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.top-spacer{flex:1}.status{font:9px "IBM Plex Mono",Consolas,monospace;color:#777;letter-spacing:.08em}.status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--brand);margin-right:6px}
-.deck{grid-column:2;grid-row:2;position:relative;min-height:0;background:var(--paper);overflow:hidden}.slide{position:absolute;inset:0;padding:18px 28px 64px;opacity:0;visibility:hidden;transform:translateX(20px);transition:opacity .34s var(--ease),transform .34s var(--ease)}.slide.is-active{opacity:1;visibility:visible;transform:none;z-index:2}.slide-shell{height:100%;display:grid;grid-template-rows:28px minmax(0,1fr);gap:10px;max-width:1680px;margin:auto}.slide-meta{display:flex;align-items:center;justify-content:space-between;padding:0 4px;color:#777}.eyeline{font-size:9px;letter-spacing:.16em;color:var(--brand-dark)}.slide-count{font:10px "IBM Plex Mono",Consolas,monospace;letter-spacing:.08em}
-.ppt-frame{inline-size:min(100%,calc((100dvh - 174px)*1.778));aspect-ratio:33867/19050;max-block-size:100%;justify-self:center;align-self:center;background:#fff;border:1px solid #ccc;box-shadow:0 18px 48px rgba(0,0,0,.16);overflow:hidden;position:relative}.ppt-dom{display:block;width:100%;height:100%}.ppt-svg-mount{width:100%;height:100%;display:grid;place-items:center;background:#fff}.ppt-svg-mount::before{content:"LOADING";font:9px "IBM Plex Mono",Consolas,monospace;letter-spacing:.15em;color:#999}.ppt-svg-mount.is-loaded::before{display:none}.ppt-svg-mount>svg{grid-area:1/1;width:100%;height:100%;display:block}.ppt-dom text,.ppt-dom tspan{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif}
+.deck{grid-column:2;grid-row:2;position:relative;min-height:0;background:var(--paper);overflow:hidden}.slide{position:absolute;inset:0;padding:0;opacity:0;visibility:hidden;transform:translateX(20px);transition:opacity .34s var(--ease),transform .34s var(--ease)}.slide.is-active{opacity:1;visibility:visible;transform:none;z-index:2}.slide-shell{height:100%;display:grid;grid-template-rows:minmax(0,1fr);gap:0;max-width:none;margin:0}.slide-meta{display:none}.eyeline{font-size:9px;letter-spacing:.16em;color:var(--brand-dark)}.slide-count{font:10px "IBM Plex Mono",Consolas,monospace;letter-spacing:.08em}
+.ppt-frame{inline-size:100%;block-size:100%;min-inline-size:0;min-block-size:0;justify-self:stretch;align-self:stretch;background:#fff;border:0;box-shadow:none;overflow:hidden;position:relative}.ppt-dom{display:block;width:100%;height:100%}.ppt-svg-mount{width:100%;height:100%;display:grid;place-items:center;background:#fff;position:relative;container-type:size}.ppt-svg-mount::before{content:"LOADING";font:9px "IBM Plex Mono",Consolas,monospace;letter-spacing:.15em;color:#999}.ppt-svg-mount.is-loaded::before{display:none}.ppt-svg-mount>svg{grid-area:1/1;width:100%;height:100%;display:block}.ppt-text-layer{position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none}.ppt-text-module{position:absolute;margin:0;padding:.34cqh .42cqw;color:#182021;background:rgba(255,255,255,.94);border-top:1px solid #aeb9b4;font-family:"Yu Gothic UI","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.5;letter-spacing:.01em;overflow:hidden;box-sizing:border-box}.ppt-text-module>*{display:block;margin:0;width:100%;font:inherit;color:inherit;white-space:pre-wrap;overflow-wrap:anywhere}.ppt-text-module.is-title{padding:.28cqh .5cqw .36cqh;border-top:0;border-left:.18cqw solid #a9cf3e;background:rgba(247,248,245,.97);color:#101718;font-weight:700;line-height:1.14;letter-spacing:-.025em}.ppt-text-module.is-label{padding:.18cqh .34cqw;border-top-color:#3d7375;background:rgba(247,248,245,.96);color:#3d7375;font-weight:700;line-height:1.3;letter-spacing:.07em}.ppt-text-module.is-accent{border-top-color:#a9cf3e;color:#789414;font-weight:700}.ppt-text-module.is-metric{padding:.25cqh .4cqw;border-top:2px solid #a9cf3e;background:#fff;color:#789414;font-family:"IBM Plex Mono",Consolas,monospace;font-weight:700;line-height:1.05;letter-spacing:-.04em}.ppt-text-module.is-light{background:rgba(16,23,24,.96);border-top-color:#3d7375;color:#fff}.ppt-text-module.is-light.is-title{border-left-color:#a9cf3e}.ppt-text-module.is-light.is-label{color:#aebbb8}.ppt-text-module.is-light.is-accent,.ppt-text-module.is-light.is-metric{color:#a9cf3e}.ppt-dom text,.ppt-dom tspan{font-family:"Yu Gothic UI","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-kerning:normal;text-rendering:geometricPrecision}
 .ppt-repair-layer{position:absolute;inset:0;pointer-events:none;font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif}.ppt-repair-item{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.15;padding:.25%;overflow:hidden}.ppt-repair-flow{font-size:clamp(7px,.9vw,14px);font-weight:700;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.12)}.ppt-repair-diagram{font-size:clamp(6px,.72vw,11px);font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}.footer-nav{position:fixed;z-index:90;right:18px;bottom:14px;width:216px;height:32px;display:grid;grid-template-columns:32px 1fr 32px;gap:8px;background:rgba(255,255,255,.96);border:1px solid #ccc;box-shadow:0 8px 24px rgba(0,0,0,.12)}.nav-button{width:32px;height:30px;padding:0;background:transparent;border:0;color:#555;cursor:pointer;font-size:0}.nav-button:hover{color:#fff;background:var(--brand)}#prevButton::after{content:"‹";font:300 24px/1 Inter,sans-serif}#nextButton::after{content:"›";font:300 24px/1 Inter,sans-serif}.progress-area{display:flex;align-items:center;gap:8px;min-width:0}.progress-track{height:2px;background:#ddd;flex:1;position:relative}.progress-fill{position:absolute;inset:0 auto 0 0;background:var(--brand);width:0;transition:width .34s var(--ease)}.page-readout{font:9px "IBM Plex Mono",Consolas,monospace;color:#666;min-width:38px;text-align:right}
-@media(max-width:980px){:root{--rail:64px}.brand-link,.nav-item span,.rail-foot{display:none}.v2-rail-brand{padding:14px 0 8px;justify-content:center}.v2-rail-toggle{margin:0}.nav-item{grid-template-columns:1fr;padding:0;text-align:center}.top-section{display:none}.slide{padding:12px 10px 54px}.slide-shell{grid-template-rows:22px minmax(0,1fr);gap:6px}.ppt-repair-layer{position:absolute;inset:0;pointer-events:none;font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif}.ppt-repair-item{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.15;padding:.25%;overflow:hidden}.ppt-repair-flow{font-size:clamp(7px,.9vw,14px);font-weight:700;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.12)}.ppt-repair-diagram{font-size:clamp(6px,.72vw,11px);font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}.footer-nav{right:10px;bottom:10px}}@media(max-width:620px){.app{display:block}.v2-rail,.topbar{display:none}.deck{height:100%}.slide{padding:8px 8px 48px}.ppt-repair-layer{position:absolute;inset:0;pointer-events:none;font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif}.ppt-repair-item{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.15;padding:.25%;overflow:hidden}.ppt-repair-flow{font-size:clamp(7px,.9vw,14px);font-weight:700;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.12)}.ppt-repair-diagram{font-size:clamp(6px,.72vw,11px);font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}.footer-nav{right:8px;bottom:8px;width:190px}}
+@media(max-width:980px){:root{--rail:64px}.brand-link,.nav-item span,.rail-foot{display:none}.v2-rail-brand{padding:14px 0 8px;justify-content:center}.v2-rail-toggle{margin:0}.nav-item{grid-template-columns:1fr;padding:0;text-align:center}.top-section{display:none}.slide{padding:0}.slide-shell{grid-template-rows:minmax(0,1fr);gap:0}.ppt-repair-layer{position:absolute;inset:0;pointer-events:none;font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif}.ppt-repair-item{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.15;padding:.25%;overflow:hidden}.ppt-repair-flow{font-size:clamp(7px,.9vw,14px);font-weight:700;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.12)}.ppt-repair-diagram{font-size:clamp(6px,.72vw,11px);font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}.footer-nav{right:10px;bottom:10px}}@media(max-width:620px){.app{display:block}.v2-rail,.topbar{display:none}.deck{height:100%}.slide{padding:0}.ppt-repair-layer{position:absolute;inset:0;pointer-events:none;font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif}.ppt-repair-item{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.15;padding:.25%;overflow:hidden}.ppt-repair-flow{font-size:clamp(7px,.9vw,14px);font-weight:700;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.12)}.ppt-repair-diagram{font-size:clamp(6px,.72vw,11px);font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}.footer-nav{right:8px;bottom:8px;width:190px}}
 </style>
 </head>
 <body>
@@ -396,11 +396,98 @@
 </div>
 <div class="footer-nav" aria-label="ページ切替"><button class="nav-button" id="prevButton" aria-label="前のページ"></button><div class="progress-area"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="page-readout" id="pageReadout">01 / 38</div></div><button class="nav-button" id="nextButton" aria-label="次のページ"></button></div>
 <script>
-(()=>{const app=document.getElementById('app'),slides=[...document.querySelectorAll('.slide')],nav=[...document.querySelectorAll('.nav-item')],top=document.getElementById('topSection'),readout=document.getElementById('pageReadout'),fill=document.getElementById('progressFill');let current=0;const show=next=>{current=(next+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('is-active',i===current));nav.forEach((n,i)=>n.classList.toggle('is-active',i===current));top.textContent=slides[current].dataset.title;readout.textContent=String(current+1).padStart(2,'0')+' / '+slides.length;fill.style.width=((current+1)/slides.length*100)+'%';nav[current].scrollIntoView({block:'nearest'});history.replaceState(null,'','#slide-'+(current+1))};nav.forEach((n,i)=>n.addEventListener('click',()=>show(i)));document.getElementById('prevButton').addEventListener('click',()=>show(current-1));document.getElementById('nextButton').addEventListener('click',()=>show(current+1));document.getElementById('railToggle').addEventListener('click',()=>app.classList.toggle('rail-collapsed'));window.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(current+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(current-1)}});const found=location.hash.match(/slide-(\d+)/);show(found?Math.min(Math.max(+found[1]-1,0),slides.length-1):0)})();
+(()=>{const app=document.getElementById('app'),slides=[...document.querySelectorAll('.slide')],nav=[...document.querySelectorAll('.nav-item')],top=document.getElementById('topSection'),readout=document.getElementById('pageReadout'),fill=document.getElementById('progressFill');document.querySelectorAll('.ppt-dom').forEach(svg=>svg.setAttribute('preserveAspectRatio','none'));let current=0;const show=next=>{current=(next+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('is-active',i===current));nav.forEach((n,i)=>n.classList.toggle('is-active',i===current));top.textContent=slides[current].dataset.title;readout.textContent=String(current+1).padStart(2,'0')+' / '+slides.length;fill.style.width=((current+1)/slides.length*100)+'%';nav[current].scrollIntoView({block:'nearest'});history.replaceState(null,'','#slide-'+(current+1))};nav.forEach((n,i)=>n.addEventListener('click',()=>show(i)));document.getElementById('prevButton').addEventListener('click',()=>show(current-1));document.getElementById('nextButton').addEventListener('click',()=>show(current+1));document.getElementById('railToggle').addEventListener('click',()=>app.classList.toggle('rail-collapsed'));window.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(current+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(current-1)}});const found=location.hash.match(/slide-(\d+)/);show(found?Math.min(Math.max(+found[1]-1,0),slides.length-1):0)})();
 </script>
 <script>
 (()=>{
   const pending=new WeakMap();
+  function styleText(svg){
+    svg.querySelectorAll('text,tspan').forEach(node=>{
+      node.style.fontFamily='"Yu Gothic UI","Noto Sans JP","Yu Gothic",Meiryo,sans-serif';
+      node.style.fontKerning='normal';
+      const size=parseFloat(node.getAttribute('font-size')||'0');
+      const weight=parseInt(node.getAttribute('font-weight')||'400',10);
+      const fill=node.getAttribute('fill')||'';
+      const rgb=fill.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/i);
+      if(!rgb)return;
+      const r=+rgb[1],g=+rgb[2],b=+rgb[3];
+      const isLight=r>205&&g>205&&b>205;
+      const isNeutral=Math.max(r,g,b)-Math.min(r,g,b)<24;
+      const isGreen=g>r*1.12&&g>b*1.08;
+      if(size>=900){
+        node.style.fontWeight='700';
+        node.style.letterSpacing='-.025em';
+        if(!isLight)node.style.fill='#101718';
+      }else if(weight>=600){
+        node.style.fontWeight='700';
+        node.style.letterSpacing='-.01em';
+        if(!isLight)node.style.fill=isGreen?'#789414':'#101718';
+      }else if(isGreen){
+        node.style.fill=isLight?'#a9cf3e':'#789414';
+      }else if(!isNeutral&&!isLight){
+        node.style.fill='#3d7375';
+      }else if(!isLight){
+        node.style.fill=size&&size<=450?'#657170':'#182021';
+      }
+    });
+  }
+  function renderTextModules(svg,mount){
+    svg.querySelectorAll('text').forEach(text=>{text.style.opacity='';text.removeAttribute('aria-hidden')});
+    const old=mount.querySelector('.ppt-text-layer');
+    if(old)old.remove();
+    const layer=document.createElement('div');
+    layer.className='ppt-text-layer';
+    layer.setAttribute('aria-label','スライド文字レイヤー');
+    const mountRect=mount.getBoundingClientRect();
+    const viewHeight=svg.viewBox.baseVal.height||19050;
+    [...svg.querySelectorAll('text')].forEach(text=>{
+      const content=text.textContent.replace(/\s+/g,' ').trim();
+      const rect=text.getBoundingClientRect();
+      const style=getComputedStyle(text);
+      if(!content||rect.width<1||rect.height<1||style.display==='none'||style.visibility==='hidden'||+style.opacity===0)return;
+      if(rect.right<=mountRect.left||rect.left>=mountRect.right||rect.bottom<=mountRect.top||rect.top>=mountRect.bottom)return;
+      const spans=[...text.querySelectorAll('tspan[font-size]')];
+      const sizes=spans.map(n=>parseFloat(n.getAttribute('font-size')||'0'));
+      const weights=spans.map(n=>parseInt(n.getAttribute('font-weight')||'400',10));
+      const maxSize=Math.max(0,...sizes);
+      const maxWeight=Math.max(400,...weights);
+      const fill=(spans.find(n=>n.getAttribute('fill'))?.getAttribute('fill')||'').match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/i);
+      const rgb=fill?[+fill[1],+fill[2],+fill[3]]:[24,32,33];
+      const isLight=rgb.every(v=>v>205);
+      const isGreen=rgb[1]>rgb[0]*1.12&&rgb[1]>rgb[2]*1.08;
+      const isMetric=/^[\s￥$¥0-9０-９,.+％%年以上人件台分時間〜～]+$/.test(content)&&content.length<28;
+      const isTitle=maxSize>=900||(maxWeight>=600&&content.length<42);
+      const isLabel=!isTitle&&!isMetric&&(maxSize&&maxSize<=450||content.length<18);
+      const article=document.createElement('article');
+      article.className='ppt-text-module'+(isTitle?' is-title':isMetric?' is-metric':isLabel?' is-label':'')+(isGreen?' is-accent':'')+(isLight?' is-light':'');
+      article.style.left=((rect.left-mountRect.left)/mountRect.width*100)+'%';
+      article.style.top=((rect.top-mountRect.top)/mountRect.height*100)+'%';
+      article.style.width=(rect.width/mountRect.width*100)+'%';
+      article.style.height=(rect.height/mountRect.height*100)+'%';
+      const node=document.createElement(isTitle?'h3':isLabel?'small':'p');
+      const lines=[...text.querySelectorAll('.TextPosition')].filter(line=>line.textContent.trim()&&line.getBoundingClientRect().width>0);
+      node.textContent=(lines.length?lines:[text]).map(line=>line.textContent.replace(/^\s+|\s+$/g,'')).join('\n');
+      node.style.fontSize=(maxSize/viewHeight*100)+'cqh';
+      article.append(node);
+      layer.append(article);
+      text.style.opacity='0';
+      text.setAttribute('aria-hidden','true');
+    });
+    mount.append(layer);
+    layer.querySelectorAll('.ppt-text-module>*').forEach(node=>{
+      let size=parseFloat(getComputedStyle(node).fontSize);
+      let guard=0;
+      while((node.scrollHeight>node.parentElement.clientHeight||node.scrollWidth>node.parentElement.clientWidth)&&size>6&&guard++<24){
+        size*=.94;
+        node.style.fontSize=size+'px';
+      }
+    });
+    if(!mount._textResizeObserver){
+      let raf=0;
+      mount._textResizeObserver=new ResizeObserver(()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderTextModules(svg,mount))});
+      mount._textResizeObserver.observe(mount);
+    }
+  }
   async function loadSlide(section){
     const mount=section?.querySelector('.ppt-svg-mount');
     if(!mount||mount.classList.contains('is-loaded'))return;
@@ -427,7 +514,10 @@
       });
       svg.classList.add('ppt-dom');
       svg.setAttribute('role','img');
+      svg.setAttribute('preserveAspectRatio','none');
+      styleText(svg);
       mount.append(document.adoptNode(svg));
+      renderTextModules(svg,mount);
       mount.classList.add('is-loaded');
       mount.setAttribute('aria-busy','false');
     })().catch(error=>{mount.setAttribute('aria-busy','false');mount.dataset.error=error.message;console.error(error)});
