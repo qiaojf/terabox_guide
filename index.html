@@ -5,277 +5,536 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>テラボックス株式会社｜会社案内</title>
 <style>
-:root{--black:#0c0c0c;--black-2:#171717;--white:#fafafa;--gray-1:#e8e8e8;--gray-2:#b5b5b5;--gray-3:#6e6e6e;--rail:196px;--ease:cubic-bezier(.2,.75,.25,1)}
-*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:var(--black);font-family:"Yu Gothic UI","Noto Sans JP",Meiryo,sans-serif;color:var(--black)}button{font:inherit}.app{height:100%;display:grid;grid-template-columns:var(--rail) minmax(0,1fr);grid-template-rows:54px minmax(0,1fr);background:var(--white);transition:grid-template-columns .28s var(--ease)}.app.rail-collapsed{--rail:64px}
-.v2-rail{grid-column:1;grid-row:1/3;z-index:80;background:var(--black);border-right:1px solid #4a4a4a;color:#fff;display:grid;grid-template-rows:76px 32px 1fr 54px;overflow:hidden}.v2-rail-brand{display:flex;align-items:center;padding:16px 18px 8px;gap:12px}.brand-word{font-weight:800;letter-spacing:.16em;font-size:16px;white-space:nowrap}.brand-sub{font-size:9px;color:var(--gray-2);letter-spacing:.12em;white-space:nowrap}.v2-rail-toggle{width:30px;height:28px;margin-left:auto;flex:0 0 30px;background:transparent;color:#ddd;border:1px solid #606060;cursor:pointer;display:grid;place-items:center}.v2-rail-toggle svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5}.v2-rail-nav{padding:8px 0 12px;overflow:auto;scrollbar-width:none}.v2-rail-nav::-webkit-scrollbar{display:none}.nav-item{position:relative;width:100%;height:37px;padding:0 14px;display:grid;grid-template-columns:27px 1fr;gap:8px;align-items:center;background:transparent;color:#999;text-align:left;border:0;cursor:pointer;white-space:nowrap}.nav-item::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:2px;background:transparent}.nav-item b{font:600 10px Consolas,monospace;color:#777}.nav-item span{font-size:10.5px;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}.nav-item:hover{color:#fff}.nav-item.is-active{color:#fff;background:#232323}.nav-item.is-active::before{background:#fff}.nav-item.is-active b{color:#fff}.rail-foot{border-top:1px solid #444;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;color:#aaa;font-size:9px;letter-spacing:.1em;white-space:nowrap}.app.rail-collapsed .brand-sub,.app.rail-collapsed .nav-item span,.app.rail-collapsed .rail-foot{display:none}.app.rail-collapsed .v2-rail-brand{padding:16px 0 8px;justify-content:center}.app.rail-collapsed .brand-word{display:none}.app.rail-collapsed .v2-rail-toggle{margin:0}.app.rail-collapsed .nav-item{grid-template-columns:1fr;padding:0;text-align:center}
-.topbar{grid-column:2;grid-row:1;display:flex;align-items:center;gap:18px;padding:0 22px;background:var(--black);color:#fff;border-bottom:1px solid #444;z-index:50}.top-client{font-size:11px;letter-spacing:.1em;color:#eee}.top-rule{height:16px;width:1px;background:#555}.top-section{font-size:10px;color:#aaa;letter-spacing:.08em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.top-spacer{flex:1}.status{font:9px Consolas;color:#bbb;letter-spacing:.08em}.status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#eee;margin-right:6px}
-.deck{grid-column:2;grid-row:2;position:relative;min-height:0;background:#ddd;overflow:hidden}.slide{position:absolute;inset:0;padding:18px 28px 64px;background:linear-gradient(135deg,#f5f5f5,#ddd);opacity:0;visibility:hidden;transform:translateX(20px);transition:opacity .34s var(--ease),transform .34s var(--ease);isolation:isolate}.slide.is-active{opacity:1;visibility:visible;transform:none;z-index:2}.slide-shell{height:100%;display:grid;grid-template-rows:28px minmax(0,1fr);gap:10px;max-width:1680px;margin:auto}.slide-meta{display:flex;align-items:center;justify-content:space-between;padding:0 4px;color:#555}.eyeline{font-size:9px;letter-spacing:.16em}.slide-count{font:10px Consolas,monospace;letter-spacing:.08em}.ppt-frame{inline-size:min(100%,calc((100dvh - 174px)*1.778));block-size:auto;aspect-ratio:33867/19050;max-block-size:100%;min-height:0;justify-self:center;align-self:center;display:grid;place-items:center;background:#f7f7f7;border:1px solid #555;box-shadow:0 24px 70px rgba(0,0,0,.25);overflow:hidden;position:relative}.ppt-document{width:100%;height:100%;display:block;border:0;object-fit:contain;filter:grayscale(1) contrast(1.12) brightness(1.04)}.ppt-document:focus{outline:2px solid #111;outline-offset:-2px}
-.footer-nav{position:fixed;z-index:90;right:18px;bottom:14px;width:216px;height:32px;padding:0;display:grid;grid-template-columns:32px 1fr 32px;gap:8px;background:rgba(12,12,12,.94);border:1px solid #666;backdrop-filter:blur(12px)}.nav-button{width:32px;height:30px;padding:0;background:transparent;border:0;color:#eee;cursor:pointer;font-size:0}.nav-button:hover{color:#111;background:#eee}#prevButton::after{content:"‹";font:300 24px/1 Inter,sans-serif}#nextButton::after{content:"›";font:300 24px/1 Inter,sans-serif}.progress-area{display:flex;align-items:center;gap:8px;min-width:0}.progress-track{height:1px;background:#555;flex:1;position:relative}.progress-fill{position:absolute;inset:0 auto 0 0;background:#fff;width:2.33%;transition:width .34s var(--ease)}.page-readout{font:9px Consolas,monospace;color:#eee;min-width:38px;text-align:right}
-@media(max-width:980px){:root{--rail:64px}.app{--rail:64px}.brand-sub,.nav-item span,.rail-foot{display:none}.v2-rail-brand{padding-left:13px}.brand-word{font-size:12px;letter-spacing:.08em}.nav-item{grid-template-columns:1fr;padding:0;text-align:center}.top-section{display:none}.slide{padding:12px 10px 54px}.slide-shell{grid-template-rows:22px minmax(0,1fr);gap:6px}.footer-nav{right:10px;bottom:10px}}@media(max-width:620px){.app{display:block}.v2-rail,.topbar{display:none}.deck{height:100%}.slide{padding:8px 8px 48px}.footer-nav{right:8px;bottom:8px;width:190px}}
+:root{--brand:#81b119;--brand-dark:#648c12;--ink:#333;--muted:#777;--paper:#f5f5f5;--line:#ddd;--white:#fff;--rail:210px;--ease:cubic-bezier(.2,.75,.25,1)}
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:var(--paper);font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;color:var(--ink)}button{font:inherit}.app{height:100%;display:grid;grid-template-columns:var(--rail) minmax(0,1fr);grid-template-rows:54px minmax(0,1fr);background:var(--paper);transition:grid-template-columns .28s var(--ease)}.app.rail-collapsed{--rail:64px}
+.v2-rail{grid-column:1;grid-row:1/3;z-index:80;background:var(--white);border-right:1px solid var(--line);display:grid;grid-template-rows:76px 16px 1fr 54px;overflow:hidden}.v2-rail-brand{display:flex;align-items:center;padding:14px 14px 8px;gap:10px}.brand-link{display:block;min-width:0}.brand-logo{display:block;width:132px;height:auto}.v2-rail-toggle{width:30px;height:28px;margin-left:auto;flex:0 0 30px;background:transparent;color:#777;border:1px solid #ccc;cursor:pointer;display:grid;place-items:center}.v2-rail-toggle:hover{color:var(--brand);border-color:var(--brand)}.v2-rail-toggle svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5}
+.v2-rail-nav{padding:8px 0 12px;overflow:auto;scrollbar-width:none}.v2-rail-nav::-webkit-scrollbar{display:none}.nav-item{position:relative;width:100%;height:37px;padding:0 14px;display:grid;grid-template-columns:27px 1fr;gap:8px;align-items:center;background:transparent;color:#777;text-align:left;border:0;cursor:pointer;white-space:nowrap}.nav-item::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:3px;background:transparent}.nav-item b{font:600 10px "IBM Plex Mono","JetBrains Mono",Consolas,monospace;color:#999}.nav-item span{font-size:10.5px;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}.nav-item:hover{color:#222;background:#fafafa}.nav-item.is-active{color:#222;background:#f4f7ee}.nav-item.is-active::before{background:var(--brand)}.nav-item.is-active b{color:var(--brand-dark)}
+.rail-foot{border-top:1px solid var(--line);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;color:#888;font-size:9px;letter-spacing:.1em;white-space:nowrap}.app.rail-collapsed .brand-link,.app.rail-collapsed .nav-item span,.app.rail-collapsed .rail-foot{display:none}.app.rail-collapsed .v2-rail-brand{padding:14px 0 8px;justify-content:center}.app.rail-collapsed .v2-rail-toggle{margin:0}.app.rail-collapsed .nav-item{grid-template-columns:1fr;padding:0;text-align:center}
+.topbar{grid-column:2;grid-row:1;display:flex;align-items:center;gap:18px;padding:0 22px;background:var(--white);border-bottom:1px solid var(--line);z-index:50}.top-client{font-size:11px;letter-spacing:.1em;color:#333}.top-rule{height:16px;width:1px;background:#ccc}.top-section{font-size:10px;color:#777;letter-spacing:.08em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.top-spacer{flex:1}.status{font:9px "IBM Plex Mono",Consolas,monospace;color:#777;letter-spacing:.08em}.status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--brand);margin-right:6px}
+.deck{grid-column:2;grid-row:2;position:relative;min-height:0;background:var(--paper);overflow:hidden}.slide{position:absolute;inset:0;padding:0;opacity:0;visibility:hidden;transform:translateX(20px);transition:opacity .34s var(--ease),transform .34s var(--ease)}.slide.is-active{opacity:1;visibility:visible;transform:none;z-index:2}.slide-shell{height:100%;display:grid;grid-template-rows:minmax(0,1fr);gap:0;max-width:none;margin:0}.slide-meta{display:none}.eyeline{font-size:9px;letter-spacing:.16em;color:var(--brand-dark)}.slide-count{font:10px "IBM Plex Mono",Consolas,monospace;letter-spacing:.08em}
+.ppt-frame{inline-size:100%;block-size:100%;min-inline-size:0;min-block-size:0;justify-self:stretch;align-self:stretch;background:#fff;border:0;box-shadow:none;overflow:hidden;position:relative}.ppt-dom{display:block;width:100%;height:100%}.ppt-svg-mount{width:100%;height:100%;display:grid;place-items:center;background:#fff;position:relative;container-type:size}.ppt-svg-mount::before{content:"LOADING";font:9px "IBM Plex Mono",Consolas,monospace;letter-spacing:.15em;color:#999}.ppt-svg-mount.is-loaded::before{display:none}.ppt-svg-mount>svg{grid-area:1/1;width:100%;height:100%;display:block}.ppt-text-layer{position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none}.ppt-text-module{position:absolute;margin:0;padding:.34cqh .42cqw;color:#182021;background:rgba(255,255,255,.94);border-top:1px solid #aeb9b4;font-family:"Yu Gothic UI","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.5;letter-spacing:.01em;overflow:hidden;box-sizing:border-box}.ppt-text-module>*{display:block;margin:0;width:100%;font:inherit;color:inherit;white-space:pre-wrap;overflow-wrap:anywhere}.ppt-text-module.is-title{padding:.28cqh .5cqw .36cqh;border-top:0;border-left:.18cqw solid #a9cf3e;background:rgba(247,248,245,.97);color:#101718;font-weight:700;line-height:1.14;letter-spacing:-.025em}.ppt-text-module.is-label{padding:.18cqh .34cqw;border-top-color:#3d7375;background:rgba(247,248,245,.96);color:#3d7375;font-weight:700;line-height:1.3;letter-spacing:.07em}.ppt-text-module.is-accent{border-top-color:#a9cf3e;color:#789414;font-weight:700}.ppt-text-module.is-metric{padding:.25cqh .4cqw;border-top:2px solid #a9cf3e;background:#fff;color:#789414;font-family:"IBM Plex Mono",Consolas,monospace;font-weight:700;line-height:1.05;letter-spacing:-.04em}.ppt-text-module.is-light{background:rgba(16,23,24,.96);border-top-color:#3d7375;color:#fff}.ppt-text-module.is-light.is-title{border-left-color:#a9cf3e}.ppt-text-module.is-light.is-label{color:#aebbb8}.ppt-text-module.is-light.is-accent,.ppt-text-module.is-light.is-metric{color:#a9cf3e}.ppt-dom text,.ppt-dom tspan{font-family:"Yu Gothic UI","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-kerning:normal;text-rendering:geometricPrecision}
+.ppt-repair-layer{position:absolute;inset:0;pointer-events:none;font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif}.ppt-repair-item{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.15;padding:.25%;overflow:hidden}.ppt-repair-flow{font-size:clamp(7px,.9vw,14px);font-weight:700;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.12)}.ppt-repair-diagram{font-size:clamp(6px,.72vw,11px);font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}.footer-nav{position:fixed;z-index:90;right:18px;bottom:14px;width:216px;height:32px;display:grid;grid-template-columns:32px 1fr 32px;gap:8px;background:rgba(255,255,255,.96);border:1px solid #ccc;box-shadow:0 8px 24px rgba(0,0,0,.12)}.nav-button{width:32px;height:30px;padding:0;background:transparent;border:0;color:#555;cursor:pointer;font-size:0}.nav-button:hover{color:#fff;background:var(--brand)}#prevButton::after{content:"‹";font:300 24px/1 Inter,sans-serif}#nextButton::after{content:"›";font:300 24px/1 Inter,sans-serif}.progress-area{display:flex;align-items:center;gap:8px;min-width:0}.progress-track{height:2px;background:#ddd;flex:1;position:relative}.progress-fill{position:absolute;inset:0 auto 0 0;background:var(--brand);width:0;transition:width .34s var(--ease)}.page-readout{font:9px "IBM Plex Mono",Consolas,monospace;color:#666;min-width:38px;text-align:right}
+@media(max-width:980px){:root{--rail:64px}.brand-link,.nav-item span,.rail-foot{display:none}.v2-rail-brand{padding:14px 0 8px;justify-content:center}.v2-rail-toggle{margin:0}.nav-item{grid-template-columns:1fr;padding:0;text-align:center}.top-section{display:none}.slide{padding:0}.slide-shell{grid-template-rows:minmax(0,1fr);gap:0}.ppt-repair-layer{position:absolute;inset:0;pointer-events:none;font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif}.ppt-repair-item{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.15;padding:.25%;overflow:hidden}.ppt-repair-flow{font-size:clamp(7px,.9vw,14px);font-weight:700;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.12)}.ppt-repair-diagram{font-size:clamp(6px,.72vw,11px);font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}.footer-nav{right:10px;bottom:10px}}@media(max-width:620px){.app{display:block}.v2-rail,.topbar{display:none}.deck{height:100%}.slide{padding:0}.ppt-repair-layer{position:absolute;inset:0;pointer-events:none;font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif}.ppt-repair-item{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.15;padding:.25%;overflow:hidden}.ppt-repair-flow{font-size:clamp(7px,.9vw,14px);font-weight:700;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.12)}.ppt-repair-diagram{font-size:clamp(6px,.72vw,11px);font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}.footer-nav{right:8px;bottom:8px;width:190px}}
 </style>
 </head>
 <body>
-<div class="app" id="app"><aside class="v2-rail" aria-label="スライドナビゲーション"><div class="v2-rail-brand"><div><div class="brand-word">TERABOX</div><div class="brand-sub">COMPANY GUIDE</div></div><button class="v2-rail-toggle" id="railToggle" aria-label="ナビゲーションを折りたたむ"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div><div></div><nav class="v2-rail-nav" id="railNav"><button type="button" class="nav-item" data-go="0"><b>01</b><span>会社案内</span></button>
-<button type="button" class="nav-item" data-go="1"><b>02</b><span>目次</span></button>
-<button type="button" class="nav-item" data-go="2"><b>03</b><span>1．経営ビジョン</span></button>
-<button type="button" class="nav-item" data-go="3"><b>04</b><span>2．会社概要</span></button>
-<button type="button" class="nav-item" data-go="4"><b>05</b><span>3．会社組織</span></button>
-<button type="button" class="nav-item" data-go="5"><b>06</b><span>エンジニアリング事業部｜目次</span></button>
-<button type="button" class="nav-item" data-go="6"><b>07</b><span>4．エンジニアリング事業部</span></button>
-<button type="button" class="nav-item" data-go="7"><b>08</b><span>4.1 インフラ部</span></button>
-<button type="button" class="nav-item" data-go="8"><b>09</b><span>4.2 システム開発部</span></button>
-<button type="button" class="nav-item" data-go="9"><b>10</b><span>ソリューション事業部｜目次</span></button>
-<button type="button" class="nav-item" data-go="10"><b>11</b><span>5．ソリューション事業部</span></button>
-<button type="button" class="nav-item" data-go="11"><b>12</b><span>5.1 ロボット推進部</span></button>
+<div class="app" id="app">
+<aside class="v2-rail" aria-label="スライドナビゲーション">
+  <div class="v2-rail-brand"><a class="brand-link" href="https://terabox.jp/" target="_blank" rel="noopener noreferrer" aria-label="テラボックス株式会社 公式サイト"><img class="brand-logo" src="https://terabox.jp/images/logo.png" alt="Terabox"></a><button class="v2-rail-toggle" id="railToggle" aria-label="ナビゲーションを折りたたむ"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
+  <div></div><nav class="v2-rail-nav" id="railNav"><button type="button" class="nav-item" data-go="0"><b>01</b><span>会社案内</span></button>
+<button type="button" class="nav-item" data-go="1"><b>02</b><span>1. 経営ビジョン</span></button>
+<button type="button" class="nav-item" data-go="2"><b>03</b><span>2. 会社概要</span></button>
+<button type="button" class="nav-item" data-go="3"><b>04</b><span>3. 会社組織</span></button>
+<button type="button" class="nav-item" data-go="4"><b>05</b><span>4. エンジニアリング事業部</span></button>
+<button type="button" class="nav-item" data-go="5"><b>06</b><span>4.1 インフラ部</span></button>
+<button type="button" class="nav-item" data-go="6"><b>07</b><span>4.2 システム開発部</span></button>
+<button type="button" class="nav-item" data-go="7"><b>08</b><span>5. ソリューション事業部</span></button>
+<button type="button" class="nav-item" data-go="8"><b>09</b><span>5.1 ロボット推進部</span></button>
+<button type="button" class="nav-item" data-go="9"><b>10</b><span>5.1.1 サービスロボット</span></button>
+<button type="button" class="nav-item" data-go="10"><b>11</b><span>手が届く未来</span></button>
+<button type="button" class="nav-item" data-go="11"><b>12</b><span>5.1.1 サービスロボット</span></button>
 <button type="button" class="nav-item" data-go="12"><b>13</b><span>5.1.1 サービスロボット</span></button>
-<button type="button" class="nav-item" data-go="13"><b>14</b><span>サービスロボット｜製品</span></button>
-<button type="button" class="nav-item" data-go="14"><b>15</b><span>サービスロボット｜特徴</span></button>
-<button type="button" class="nav-item" data-go="15"><b>16</b><span>サービスロボット｜製品</span></button>
-<button type="button" class="nav-item" data-go="16"><b>17</b><span>サービスロボット｜導入事例</span></button>
-<button type="button" class="nav-item" data-go="17"><b>18</b><span>サービスロボット｜介護施設</span></button>
-<button type="button" class="nav-item" data-go="18"><b>19</b><span>5.1.2 物流ロボット</span></button>
-<button type="button" class="nav-item" data-go="19"><b>20</b><span>物流ロボット｜AGF</span></button>
-<button type="button" class="nav-item" data-go="20"><b>21</b><span>物流ロボット｜FlyPick</span></button>
-<button type="button" class="nav-item" data-go="21"><b>22</b><span>物流ロボット｜導入事例</span></button>
-<button type="button" class="nav-item" data-go="22"><b>23</b><span>5.2 AI/DX推進部</span></button>
-<button type="button" class="nav-item" data-go="23"><b>24</b><span>AI基盤</span></button>
-<button type="button" class="nav-item" data-go="24"><b>25</b><span>AI活用シナリオ</span></button>
-<button type="button" class="nav-item" data-go="25"><b>26</b><span>AIoTスマートメーター</span></button>
-<button type="button" class="nav-item" data-go="26"><b>27</b><span>5.3 製品推進部</span></button>
-<button type="button" class="nav-item" data-go="27"><b>28</b><span>EB概要</span></button>
-<button type="button" class="nav-item" data-go="28"><b>29</b><span>EB特徴</span></button>
-<button type="button" class="nav-item" data-go="29"><b>30</b><span>EB適用分野</span></button>
-<button type="button" class="nav-item" data-go="30"><b>31</b><span>Dynamics 365概要</span></button>
-<button type="button" class="nav-item" data-go="31"><b>32</b><span>Dynamics 365利用シーン</span></button>
-<button type="button" class="nav-item" data-go="32"><b>33</b><span>IT人材サービス事業部｜目次</span></button>
-<button type="button" class="nav-item" data-go="33"><b>34</b><span>6．IT人材サービス事業部</span></button>
-<button type="button" class="nav-item" data-go="34"><b>35</b><span>IT人材紹介</span></button>
-<button type="button" class="nav-item" data-go="35"><b>36</b><span>IT人材研修</span></button>
-<button type="button" class="nav-item" data-go="36"><b>37</b><span>IT人材サービス｜強み</span></button>
-<button type="button" class="nav-item" data-go="37"><b>38</b><span>IT人材サービス｜実績</span></button>
-<button type="button" class="nav-item" data-go="38"><b>39</b><span>7．主要取引先</span></button>
-<button type="button" class="nav-item" data-go="39"><b>40</b><span>お問い合わせ</span></button>
-<button type="button" class="nav-item" data-go="40"><b>41</b><span>会社情報</span></button>
-<button type="button" class="nav-item" data-go="41"><b>42</b><span>事業一覧</span></button>
-<button type="button" class="nav-item" data-go="42"><b>43</b><span>テラボックス株式会社</span></button>
-</nav><div class="rail-foot"><span>43 PAGES</span><small>© TERABOX INC.</small></div></aside><header class="topbar"><div class="top-client">テラボックス株式会社</div><div class="top-rule"></div><div class="top-section" id="topSection">会社案内</div><div class="top-spacer"></div><div class="status"><i></i>LOCAL PRESENTATION</div></header><main class="deck" id="deck"><section class="slide" data-title="会社案内" aria-label="スライド1">
+<button type="button" class="nav-item" data-go="13"><b>14</b><span>5.1.1 サービスロボット</span></button>
+<button type="button" class="nav-item" data-go="14"><b>15</b><span>5.1.2 物流ロボット</span></button>
+<button type="button" class="nav-item" data-go="15"><b>16</b><span>5.1.2 物流ロボット</span></button>
+<button type="button" class="nav-item" data-go="16"><b>17</b><span>5.1.2 物流ロボット</span></button>
+<button type="button" class="nav-item" data-go="17"><b>18</b><span>5.1.2 物流ロボット</span></button>
+<button type="button" class="nav-item" data-go="18"><b>19</b><span>5.2 AI/DX推進部</span></button>
+<button type="button" class="nav-item" data-go="19"><b>20</b><span>5.2 AI/DX推進部：AIアプリケーション開発</span></button>
+<button type="button" class="nav-item" data-go="20"><b>21</b><span>5.2 AI/DX推進部：AIアプリケーション開発</span></button>
+<button type="button" class="nav-item" data-go="21"><b>22</b><span>5.2 AI/DX推進部：AIインテリジェント支援市場調査</span></button>
+<button type="button" class="nav-item" data-go="22"><b>23</b><span>5.2 AI/DX推進部：AIインテリジェント支援市場調査</span></button>
+<button type="button" class="nav-item" data-go="23"><b>24</b><span>5.2 AI/DX推進部：AIインテリジェント支援市場調査</span></button>
+<button type="button" class="nav-item" data-go="24"><b>25</b><span>5.2 AI/DX推進部：AI人材マッチング</span></button>
+<button type="button" class="nav-item" data-go="25"><b>26</b><span>5.2 AI/DX推進部：AI人材マッチング</span></button>
+<button type="button" class="nav-item" data-go="26"><b>27</b><span>5.2 AI/DX推進部：AI人材マッチング</span></button>
+<button type="button" class="nav-item" data-go="27"><b>28</b><span>5.2 AI/DX推進部：AIoTスマートメーター</span></button>
+<button type="button" class="nav-item" data-go="28"><b>29</b><span>5.2 AI/DX推進部：AIoTスマートメーター</span></button>
+<button type="button" class="nav-item" data-go="29"><b>30</b><span>5.3 製品推進部（EB）</span></button>
+<button type="button" class="nav-item" data-go="30"><b>31</b><span>5.3 製品推進部（EB）</span></button>
+<button type="button" class="nav-item" data-go="31"><b>32</b><span>5.3 製品推進部（EB）</span></button>
+<button type="button" class="nav-item" data-go="32"><b>33</b><span>5.3 製品企画部（D365）</span></button>
+<button type="button" class="nav-item" data-go="33"><b>34</b><span>5.3 製品企画部（D365）</span></button>
+<button type="button" class="nav-item" data-go="34"><b>35</b><span>6. IT人材サービス事業部</span></button>
+<button type="button" class="nav-item" data-go="35"><b>36</b><span>6. IT人材サービス事業部</span></button>
+<button type="button" class="nav-item" data-go="36"><b>37</b><span>6. IT人材サービス事業部</span></button>
+<button type="button" class="nav-item" data-go="37"><b>38</b><span>7. 主要取引先（一部）</span></button>
+</nav>
+  <div class="rail-foot"><span>38 PAGES</span><small>© TERABOX INC.</small></div>
+</aside>
+<header class="topbar"><div class="top-client">テラボックス株式会社</div><div class="top-rule"></div><div class="top-section" id="topSection">会社案内</div><div class="top-spacer"></div><div class="status"><i></i>WEB PRESENTATION</div></header>
+<main class="deck" id="deck"><section class="slide" data-title="会社案内" aria-label="スライド1">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">01 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-01.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 01"><a href="dist/slides/ppt-01.svg">テラボックス株式会社案内 PPT スライド 01</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">01 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-01.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="目次" aria-label="スライド2">
+</section>
+<section class="slide" data-title="1. 経営ビジョン" aria-label="スライド2">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">02 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-02.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 02"><a href="dist/slides/ppt-02.svg">テラボックス株式会社案内 PPT スライド 02</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">02 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-03.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="1．経営ビジョン" aria-label="スライド3">
+</section>
+<section class="slide" data-title="2. 会社概要" aria-label="スライド3">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">03 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-03.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 03"><a href="dist/slides/ppt-03.svg">テラボックス株式会社案内 PPT スライド 03</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">03 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-04.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="2．会社概要" aria-label="スライド4">
+</section>
+<section class="slide" data-title="3. 会社組織" aria-label="スライド4">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">04 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-04.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 04"><a href="dist/slides/ppt-04.svg">テラボックス株式会社案内 PPT スライド 04</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">04 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-05.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="3．会社組織" aria-label="スライド5">
+</section>
+<section class="slide" data-title="4. エンジニアリング事業部" aria-label="スライド5">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">05 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-05.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 05"><a href="dist/slides/ppt-05.svg">テラボックス株式会社案内 PPT スライド 05</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">05 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-07.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="エンジニアリング事業部｜目次" aria-label="スライド6">
+</section>
+<section class="slide" data-title="4.1 インフラ部" aria-label="スライド6">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">06 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-06.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 06"><a href="dist/slides/ppt-06.svg">テラボックス株式会社案内 PPT スライド 06</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">06 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-08.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="4．エンジニアリング事業部" aria-label="スライド7">
+</section>
+<section class="slide" data-title="4.2 システム開発部" aria-label="スライド7">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">07 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-07.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 07"><a href="dist/slides/ppt-07.svg">テラボックス株式会社案内 PPT スライド 07</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">07 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-09.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="4.1 インフラ部" aria-label="スライド8">
+</section>
+<section class="slide" data-title="5. ソリューション事業部" aria-label="スライド8">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">08 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-08.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 08"><a href="dist/slides/ppt-08.svg">テラボックス株式会社案内 PPT スライド 08</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">08 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-11.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="4.2 システム開発部" aria-label="スライド9">
+</section>
+<section class="slide" data-title="5.1 ロボット推進部" aria-label="スライド9">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">09 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-09.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 09"><a href="dist/slides/ppt-09.svg">テラボックス株式会社案内 PPT スライド 09</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">09 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-12.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="ソリューション事業部｜目次" aria-label="スライド10">
+</section>
+<section class="slide" data-title="5.1.1 サービスロボット" aria-label="スライド10">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">10 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-10.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 10"><a href="dist/slides/ppt-10.svg">テラボックス株式会社案内 PPT スライド 10</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">10 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-13.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="5．ソリューション事業部" aria-label="スライド11">
+</section>
+<section class="slide" data-title="手が届く未来" aria-label="スライド11">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">11 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-11.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 11"><a href="dist/slides/ppt-11.svg">テラボックス株式会社案内 PPT スライド 11</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">11 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-14.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="5.1 ロボット推進部" aria-label="スライド12">
+</section>
+<section class="slide" data-title="5.1.1 サービスロボット" aria-label="スライド12">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">12 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-12.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 12"><a href="dist/slides/ppt-12.svg">テラボックス株式会社案内 PPT スライド 12</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">12 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-15.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="5.1.1 サービスロボット" aria-label="スライド13">
+</section>
+<section class="slide" data-title="5.1.1 サービスロボット" aria-label="スライド13">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">13 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-13.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 13"><a href="dist/slides/ppt-13.svg">テラボックス株式会社案内 PPT スライド 13</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">13 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-16.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="サービスロボット｜製品" aria-label="スライド14">
+</section>
+<section class="slide" data-title="5.1.1 サービスロボット" aria-label="スライド14">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">14 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-14.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 14"><a href="dist/slides/ppt-14.svg">テラボックス株式会社案内 PPT スライド 14</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">14 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-17.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="サービスロボット｜特徴" aria-label="スライド15">
+</section>
+<section class="slide" data-title="5.1.2 物流ロボット" aria-label="スライド15">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">15 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-15.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 15"><a href="dist/slides/ppt-15.svg">テラボックス株式会社案内 PPT スライド 15</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">15 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-18.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="サービスロボット｜製品" aria-label="スライド16">
+</section>
+<section class="slide" data-title="5.1.2 物流ロボット" aria-label="スライド16">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">16 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-16.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 16"><a href="dist/slides/ppt-16.svg">テラボックス株式会社案内 PPT スライド 16</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">16 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-19.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="サービスロボット｜導入事例" aria-label="スライド17">
+</section>
+<section class="slide" data-title="5.1.2 物流ロボット" aria-label="スライド17">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">17 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-17.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 17"><a href="dist/slides/ppt-17.svg">テラボックス株式会社案内 PPT スライド 17</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">17 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-20.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="サービスロボット｜介護施設" aria-label="スライド18">
+</section>
+<section class="slide" data-title="5.1.2 物流ロボット" aria-label="スライド18">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">18 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-18.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 18"><a href="dist/slides/ppt-18.svg">テラボックス株式会社案内 PPT スライド 18</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">18 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-21.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="5.1.2 物流ロボット" aria-label="スライド19">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部" aria-label="スライド19">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">19 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-19.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 19"><a href="dist/slides/ppt-19.svg">テラボックス株式会社案内 PPT スライド 19</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">19 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-22.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="物流ロボット｜AGF" aria-label="スライド20">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部：AIアプリケーション開発" aria-label="スライド20">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">20 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-20.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 20"><a href="dist/slides/ppt-20.svg">テラボックス株式会社案内 PPT スライド 20</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">20 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-23.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="物流ロボット｜FlyPick" aria-label="スライド21">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部：AIアプリケーション開発" aria-label="スライド21">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">21 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-21.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 21"><a href="dist/slides/ppt-21.svg">テラボックス株式会社案内 PPT スライド 21</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">21 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-24.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="物流ロボット｜導入事例" aria-label="スライド22">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部：AIインテリジェント支援市場調査" aria-label="スライド22">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">22 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-22.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 22"><a href="dist/slides/ppt-22.svg">テラボックス株式会社案内 PPT スライド 22</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">22 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-25.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="5.2 AI/DX推進部" aria-label="スライド23">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部：AIインテリジェント支援市場調査" aria-label="スライド23">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">23 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-23.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 23"><a href="dist/slides/ppt-23.svg">テラボックス株式会社案内 PPT スライド 23</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">23 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-26.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="AI基盤" aria-label="スライド24">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部：AIインテリジェント支援市場調査" aria-label="スライド24">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">24 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-24.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 24"><a href="dist/slides/ppt-24.svg">テラボックス株式会社案内 PPT スライド 24</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">24 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-27.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="AI活用シナリオ" aria-label="スライド25">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部：AI人材マッチング" aria-label="スライド25">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">25 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-25.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 25"><a href="dist/slides/ppt-25.svg">テラボックス株式会社案内 PPT スライド 25</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">25 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-28.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="AIoTスマートメーター" aria-label="スライド26">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部：AI人材マッチング" aria-label="スライド26">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">26 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-26.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 26"><a href="dist/slides/ppt-26.svg">テラボックス株式会社案内 PPT スライド 26</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">26 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-29.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="5.3 製品推進部" aria-label="スライド27">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部：AI人材マッチング" aria-label="スライド27">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">27 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-27.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 27"><a href="dist/slides/ppt-27.svg">テラボックス株式会社案内 PPT スライド 27</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">27 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-30.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="EB概要" aria-label="スライド28">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部：AIoTスマートメーター" aria-label="スライド28">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">28 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-28.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 28"><a href="dist/slides/ppt-28.svg">テラボックス株式会社案内 PPT スライド 28</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">28 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-31.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="EB特徴" aria-label="スライド29">
+</section>
+<section class="slide" data-title="5.2 AI/DX推進部：AIoTスマートメーター" aria-label="スライド29">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">29 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-29.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 29"><a href="dist/slides/ppt-29.svg">テラボックス株式会社案内 PPT スライド 29</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">29 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-32.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="EB適用分野" aria-label="スライド30">
+</section>
+<section class="slide" data-title="5.3 製品推進部（EB）" aria-label="スライド30">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">30 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-30.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 30"><a href="dist/slides/ppt-30.svg">テラボックス株式会社案内 PPT スライド 30</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">30 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-34.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="Dynamics 365概要" aria-label="スライド31">
+</section>
+<section class="slide" data-title="5.3 製品推進部（EB）" aria-label="スライド31">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">31 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-31.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 31"><a href="dist/slides/ppt-31.svg">テラボックス株式会社案内 PPT スライド 31</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">31 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-35.svg" aria-busy="true"></div><div class="ppt-repair-layer" aria-label="PPT 35ページ補完コンテンツ">
+  <div class="ppt-repair-item ppt-repair-flow" style="left:6.73%;top:56.01%;width:16.30%;height:15.31%;background:#0097ec;color:#fff">Conventional Workflow</div>
+  <div class="ppt-repair-item ppt-repair-flow" style="left:29.60%;top:56.01%;width:16.30%;height:15.31%;background:#ee6604;color:#fff">CAD vs. EB</div>
+  <div class="ppt-repair-item ppt-repair-flow" style="left:52.46%;top:56.01%;width:16.30%;height:15.31%;background:#fdba28;color:#fff">Plant Model</div>
+  <div class="ppt-repair-item ppt-repair-flow" style="left:75.31%;top:56.01%;width:16.30%;height:15.31%;background:#803281;color:#fff">Diagrams &amp; Lists</div>
+  <div class="ppt-repair-item ppt-repair-flow" style="left:18.35%;top:73.65%;width:16.30%;height:15.31%;background:#e4e6eb;color:#222b3d">IT Architecture</div>
+  <div class="ppt-repair-item ppt-repair-flow" style="left:41.21%;top:73.65%;width:16.30%;height:15.31%;background:#e4e6eb;color:#222b3d">System Landscape</div>
+  <div class="ppt-repair-item ppt-repair-flow" style="left:64.07%;top:73.65%;width:16.30%;height:15.31%;background:#e4e6eb;color:#222b3d">Users &amp; Access Permissions</div>
+</div>
+    </div>
   </div>
-</section><section class="slide" data-title="Dynamics 365利用シーン" aria-label="スライド32">
+</section>
+<section class="slide" data-title="5.3 製品推進部（EB）" aria-label="スライド32">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">32 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-32.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 32"><a href="dist/slides/ppt-32.svg">テラボックス株式会社案内 PPT スライド 32</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">32 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-36.svg" aria-busy="true"></div><div class="ppt-repair-layer" aria-label="PPT 36ページ補完コンテンツ">
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:16.8%;top:45.5%;width:11.5%;height:8.5%">Data Handover<br>&amp; Commissioning</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:24.8%;top:46.0%;width:10.2%;height:7.5%;font-size:clamp(7px,1vw,15px);background:#26314c;border:1px solid #fff;border-radius:3px">Engineering Base</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:17.0%;top:38.5%;width:9.5%;height:5.5%">Operation</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:25.5%;top:34.8%;width:8.0%;height:5.5%">Proposal</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:33.1%;top:38.5%;width:7.0%;height:5.5%">FEED</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:37.2%;top:45.2%;width:7.5%;height:5.5%">Process</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:31.8%;top:51.0%;width:11.5%;height:8.0%">Instrumentation<br>&amp; Control</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:24.5%;top:55.8%;width:8.0%;height:5.5%">Electrical</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:16.8%;top:52.8%;width:8.5%;height:5.5%">Automation</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:2.8%;top:33.0%;width:10.0%;height:5.5%">Data Quality</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:17.0%;top:20.6%;width:10.5%;height:5.5%">Digital Twin</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:31.5%;top:19.5%;width:11.5%;height:7.5%">Data Exchange &amp;<br>Migration</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:46.5%;top:31.0%;width:10.5%;height:7.5%">Change<br>Management</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:46.5%;top:52.8%;width:9.5%;height:5.5%">Integrations</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:31.5%;top:65.0%;width:11.5%;height:7.0%">External<br>Collaboration</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:17.2%;top:66.0%;width:10.5%;height:5.5%">Modularization</div>
+  <div class="ppt-repair-item ppt-repair-diagram" style="left:2.8%;top:54.0%;width:10.5%;height:7.0%">Project<br>Management</div>
+</div></div>
   </div>
-</section><section class="slide" data-title="IT人材サービス事業部｜目次" aria-label="スライド33">
+</section>
+<section class="slide" data-title="5.3 製品企画部（D365）" aria-label="スライド33">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">33 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-33.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 33"><a href="dist/slides/ppt-33.svg">テラボックス株式会社案内 PPT スライド 33</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">33 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-37.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="6．IT人材サービス事業部" aria-label="スライド34">
+</section>
+<section class="slide" data-title="5.3 製品企画部（D365）" aria-label="スライド34">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">34 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-34.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 34"><a href="dist/slides/ppt-34.svg">テラボックス株式会社案内 PPT スライド 34</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">34 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-38.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="IT人材紹介" aria-label="スライド35">
+</section>
+<section class="slide" data-title="6. IT人材サービス事業部" aria-label="スライド35">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">35 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-35.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 35"><a href="dist/slides/ppt-35.svg">テラボックス株式会社案内 PPT スライド 35</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">35 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-40.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="IT人材研修" aria-label="スライド36">
+</section>
+<section class="slide" data-title="6. IT人材サービス事業部" aria-label="スライド36">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">36 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-36.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 36"><a href="dist/slides/ppt-36.svg">テラボックス株式会社案内 PPT スライド 36</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">36 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-41.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="IT人材サービス｜強み" aria-label="スライド37">
+</section>
+<section class="slide" data-title="6. IT人材サービス事業部" aria-label="スライド37">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">37 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-37.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 37"><a href="dist/slides/ppt-37.svg">テラボックス株式会社案内 PPT スライド 37</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">37 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-42.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="IT人材サービス｜実績" aria-label="スライド38">
+</section>
+<section class="slide" data-title="7. 主要取引先（一部）" aria-label="スライド38">
   <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">38 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-38.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 38"><a href="dist/slides/ppt-38.svg">テラボックス株式会社案内 PPT スライド 38</a></object></div>
+    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE</span><span class="slide-count">38 / 38</span></div>
+    <div class="ppt-frame">
+<div class="ppt-svg-mount" data-src="dist/slides/ppt-43.svg" aria-busy="true"></div>
+    </div>
   </div>
-</section><section class="slide" data-title="7．主要取引先" aria-label="スライド39">
-  <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">39 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-39.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 39"><a href="dist/slides/ppt-39.svg">テラボックス株式会社案内 PPT スライド 39</a></object></div>
-  </div>
-</section><section class="slide" data-title="お問い合わせ" aria-label="スライド40">
-  <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">40 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-40.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 40"><a href="dist/slides/ppt-40.svg">テラボックス株式会社案内 PPT スライド 40</a></object></div>
-  </div>
-</section><section class="slide" data-title="会社情報" aria-label="スライド41">
-  <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">41 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-41.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 41"><a href="dist/slides/ppt-41.svg">テラボックス株式会社案内 PPT スライド 41</a></object></div>
-  </div>
-</section><section class="slide" data-title="事業一覧" aria-label="スライド42">
-  <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">42 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-42.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 42"><a href="dist/slides/ppt-42.svg">テラボックス株式会社案内 PPT スライド 42</a></object></div>
-  </div>
-</section><section class="slide" data-title="テラボックス株式会社" aria-label="スライド43">
-  <div class="slide-shell">
-    <div class="slide-meta"><span class="eyeline">TERABOX / COMPANY GUIDE 2025</span><span class="slide-count">43 / 43</span></div>
-    <div class="ppt-frame"><object class="ppt-document" data="dist/slides/ppt-43.svg" type="image/svg+xml" aria-label="テラボックス株式会社案内 PPT スライド 43"><a href="dist/slides/ppt-43.svg">テラボックス株式会社案内 PPT スライド 43</a></object></div>
-  </div>
-</section></main></div>
-<div class="footer-nav" aria-label="ページ切替"><button class="nav-button" id="prevButton" aria-label="前のページ"></button><div class="progress-area"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="page-readout" id="pageReadout">01 / 43</div></div><button class="nav-button" id="nextButton" aria-label="次のページ"></button></div>
+</section>
+</main>
+</div>
+<div class="footer-nav" aria-label="ページ切替"><button class="nav-button" id="prevButton" aria-label="前のページ"></button><div class="progress-area"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="page-readout" id="pageReadout">01 / 38</div></div><button class="nav-button" id="nextButton" aria-label="次のページ"></button></div>
 <script>
-(() => { const app=document.getElementById('app'), slides=[...document.querySelectorAll('.slide')], nav=[...document.querySelectorAll('.nav-item')], top=document.getElementById('topSection'), readout=document.getElementById('pageReadout'), fill=document.getElementById('progressFill'); let current=0; const show=(next)=>{current=(next+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('is-active',i===current));nav.forEach((n,i)=>n.classList.toggle('is-active',i===current));const title=slides[current].dataset.title;top.textContent=title;readout.textContent=String(current+1).padStart(2,'0')+' / '+slides.length;fill.style.width=(((current+1)/slides.length)*100)+'%';nav[current].scrollIntoView({block:'nearest'});history.replaceState(null,'','#slide-'+(current+1))};nav.forEach((n,i)=>n.addEventListener('click',()=>show(i)));document.getElementById('prevButton').addEventListener('click',()=>show(current-1));document.getElementById('nextButton').addEventListener('click',()=>show(current+1));document.getElementById('railToggle').addEventListener('click',()=>app.classList.toggle('rail-collapsed'));window.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(current+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(current-1)}});const found=location.hash.match(/slide-(\d+)/);show(found?Math.min(Math.max(+found[1]-1,0),slides.length-1):0)})();
+(()=>{const app=document.getElementById('app'),slides=[...document.querySelectorAll('.slide')],nav=[...document.querySelectorAll('.nav-item')],top=document.getElementById('topSection'),readout=document.getElementById('pageReadout'),fill=document.getElementById('progressFill');document.querySelectorAll('.ppt-dom').forEach(svg=>svg.setAttribute('preserveAspectRatio','none'));let current=0;const show=next=>{current=(next+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('is-active',i===current));nav.forEach((n,i)=>n.classList.toggle('is-active',i===current));top.textContent=slides[current].dataset.title;readout.textContent=String(current+1).padStart(2,'0')+' / '+slides.length;fill.style.width=((current+1)/slides.length*100)+'%';nav[current].scrollIntoView({block:'nearest'});history.replaceState(null,'','#slide-'+(current+1))};nav.forEach((n,i)=>n.addEventListener('click',()=>show(i)));document.getElementById('prevButton').addEventListener('click',()=>show(current-1));document.getElementById('nextButton').addEventListener('click',()=>show(current+1));document.getElementById('railToggle').addEventListener('click',()=>app.classList.toggle('rail-collapsed'));window.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(current+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(current-1)}});const found=location.hash.match(/slide-(\d+)/);show(found?Math.min(Math.max(+found[1]-1,0),slides.length-1):0)})();
 </script>
-</body></html>
+<script>
+(()=>{
+  const pending=new WeakMap();
+  function styleText(svg){
+    svg.querySelectorAll('text,tspan').forEach(node=>{
+      node.style.fontFamily='"Yu Gothic UI","Noto Sans JP","Yu Gothic",Meiryo,sans-serif';
+      node.style.fontKerning='normal';
+      const size=parseFloat(node.getAttribute('font-size')||'0');
+      const weight=parseInt(node.getAttribute('font-weight')||'400',10);
+      const fill=node.getAttribute('fill')||'';
+      const rgb=fill.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/i);
+      if(!rgb)return;
+      const r=+rgb[1],g=+rgb[2],b=+rgb[3];
+      const isLight=r>205&&g>205&&b>205;
+      const isNeutral=Math.max(r,g,b)-Math.min(r,g,b)<24;
+      const isGreen=g>r*1.12&&g>b*1.08;
+      if(size>=900){
+        node.style.fontWeight='700';
+        node.style.letterSpacing='-.025em';
+        if(!isLight)node.style.fill='#101718';
+      }else if(weight>=600){
+        node.style.fontWeight='700';
+        node.style.letterSpacing='-.01em';
+        if(!isLight)node.style.fill=isGreen?'#789414':'#101718';
+      }else if(isGreen){
+        node.style.fill=isLight?'#a9cf3e':'#789414';
+      }else if(!isNeutral&&!isLight){
+        node.style.fill='#3d7375';
+      }else if(!isLight){
+        node.style.fill=size&&size<=450?'#657170':'#182021';
+      }
+    });
+  }
+  function renderTextModules(svg,mount){
+    svg.querySelectorAll('text').forEach(text=>{text.style.opacity='';text.removeAttribute('aria-hidden')});
+    const old=mount.querySelector('.ppt-text-layer');
+    if(old)old.remove();
+    const layer=document.createElement('div');
+    layer.className='ppt-text-layer';
+    layer.setAttribute('aria-label','スライド文字レイヤー');
+    const mountRect=mount.getBoundingClientRect();
+    const viewHeight=svg.viewBox.baseVal.height||19050;
+    [...svg.querySelectorAll('text')].forEach(text=>{
+      const content=text.textContent.replace(/\s+/g,' ').trim();
+      const rect=text.getBoundingClientRect();
+      const style=getComputedStyle(text);
+      if(!content||rect.width<1||rect.height<1||style.display==='none'||style.visibility==='hidden'||+style.opacity===0)return;
+      if(rect.right<=mountRect.left||rect.left>=mountRect.right||rect.bottom<=mountRect.top||rect.top>=mountRect.bottom)return;
+      const spans=[...text.querySelectorAll('tspan[font-size]')];
+      const sizes=spans.map(n=>parseFloat(n.getAttribute('font-size')||'0'));
+      const weights=spans.map(n=>parseInt(n.getAttribute('font-weight')||'400',10));
+      const maxSize=Math.max(0,...sizes);
+      const maxWeight=Math.max(400,...weights);
+      const fill=(spans.find(n=>n.getAttribute('fill'))?.getAttribute('fill')||'').match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/i);
+      const rgb=fill?[+fill[1],+fill[2],+fill[3]]:[24,32,33];
+      const isLight=rgb.every(v=>v>205);
+      const isGreen=rgb[1]>rgb[0]*1.12&&rgb[1]>rgb[2]*1.08;
+      const isMetric=/^[\s￥$¥0-9０-９,.+％%年以上人件台分時間〜～]+$/.test(content)&&content.length<28;
+      const isTitle=maxSize>=900||(maxWeight>=600&&content.length<42);
+      const isLabel=!isTitle&&!isMetric&&(maxSize&&maxSize<=450||content.length<18);
+      const article=document.createElement('article');
+      article.className='ppt-text-module'+(isTitle?' is-title':isMetric?' is-metric':isLabel?' is-label':'')+(isGreen?' is-accent':'')+(isLight?' is-light':'');
+      article.style.left=((rect.left-mountRect.left)/mountRect.width*100)+'%';
+      article.style.top=((rect.top-mountRect.top)/mountRect.height*100)+'%';
+      article.style.width=(rect.width/mountRect.width*100)+'%';
+      article.style.height=(rect.height/mountRect.height*100)+'%';
+      const node=document.createElement(isTitle?'h3':isLabel?'small':'p');
+      const lines=[...text.querySelectorAll('.TextPosition')].filter(line=>line.textContent.trim()&&line.getBoundingClientRect().width>0);
+      node.textContent=(lines.length?lines:[text]).map(line=>line.textContent.replace(/^\s+|\s+$/g,'')).join('\n');
+      node.style.fontSize=(maxSize/viewHeight*100)+'cqh';
+      article.append(node);
+      layer.append(article);
+      text.style.opacity='0';
+      text.setAttribute('aria-hidden','true');
+    });
+    mount.append(layer);
+    layer.querySelectorAll('.ppt-text-module>*').forEach(node=>{
+      let size=parseFloat(getComputedStyle(node).fontSize);
+      let guard=0;
+      while((node.scrollHeight>node.parentElement.clientHeight||node.scrollWidth>node.parentElement.clientWidth)&&size>6&&guard++<24){
+        size*=.94;
+        node.style.fontSize=size+'px';
+      }
+    });
+    if(!mount._textResizeObserver){
+      let raf=0;
+      mount._textResizeObserver=new ResizeObserver(()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>renderTextModules(svg,mount))});
+      mount._textResizeObserver.observe(mount);
+    }
+  }
+  async function loadSlide(section){
+    const mount=section?.querySelector('.ppt-svg-mount');
+    if(!mount||mount.classList.contains('is-loaded'))return;
+    if(pending.has(mount))return pending.get(mount);
+    const task=(async()=>{
+      const response=await fetch(mount.dataset.src);
+      if(!response.ok)throw new Error(`SVG load failed: ${mount.dataset.src}`);
+      const text=await response.text();
+      const doc=new DOMParser().parseFromString(text,'image/svg+xml');
+      const svg=doc.documentElement;
+      if(svg.nodeName.toLowerCase()!=='svg')throw new Error(`Invalid SVG: ${mount.dataset.src}`);
+      const prefix='live-'+mount.dataset.src.match(/(\d+)/)[1]+'-';
+      const idMap=new Map();
+      svg.querySelectorAll('[id]').forEach(node=>{const old=node.id;const next=prefix+old;idMap.set(old,next);node.id=next});
+      svg.querySelectorAll('*').forEach(node=>{
+        [...node.attributes].forEach(attr=>{
+          let value=attr.value;
+          idMap.forEach((next,old)=>{
+            value=value.replaceAll(`url(#${old})`,`url(#${next})`);
+            if(value===`#${old}`)value=`#${next}`;
+          });
+          if(value!==attr.value)node.setAttribute(attr.name,value);
+        });
+      });
+      svg.classList.add('ppt-dom');
+      svg.setAttribute('role','img');
+      svg.setAttribute('preserveAspectRatio','none');
+      styleText(svg);
+      mount.append(document.adoptNode(svg));
+      renderTextModules(svg,mount);
+      mount.classList.add('is-loaded');
+      mount.setAttribute('aria-busy','false');
+    })().catch(error=>{mount.setAttribute('aria-busy','false');mount.dataset.error=error.message;console.error(error)});
+    pending.set(mount,task);
+    return task;
+  }
+  const slides=[...document.querySelectorAll('.slide')];
+  const loadActive=()=>{
+    const index=slides.findIndex(slide=>slide.classList.contains('is-active'));
+    if(index<0)return;
+    loadSlide(slides[index]);
+    loadSlide(slides[(index+1)%slides.length]);
+  };
+  const observer=new MutationObserver(loadActive);
+  slides.forEach(slide=>observer.observe(slide,{attributes:true,attributeFilter:['class']}));
+  loadActive();
+})();
+</script>
+</body>
+</html>
